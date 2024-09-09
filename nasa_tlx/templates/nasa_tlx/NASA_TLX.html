@@ -1,0 +1,14 @@
+{% extends "global/Page.html" %}
+
+{% block title %}
+    NASA TLX Form
+{% endblock %}
+
+{% block content %}
+    <h3>NASA TLX Form</h3>
+    <form method="post">
+        {% csrf_token %}
+        {{ formfields }}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+{% endblock %}
